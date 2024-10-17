@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('endereco')->nullable();
             $table->string('cnpj')->unique(); // CNPJ do cliente
             $table->date('vencimento');
+            $table->boolean('ativo')->default(true);
             $table->unsignedBigInteger('plano_id')->nullable();
 
             $table->foreign('plano_id')
